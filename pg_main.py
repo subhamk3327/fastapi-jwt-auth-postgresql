@@ -12,7 +12,7 @@ import os
 load_dotenv()
 
 
-s_key = os.getenv("SECRTET_KEY")
+s_key = os.getenv("SECRET_KEY")
 algo = "HS256"
 
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated = "auto")
