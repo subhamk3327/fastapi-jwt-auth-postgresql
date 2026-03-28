@@ -7,6 +7,7 @@ from fastapi.security import OAuth2PasswordBearer
 from pydantic import BaseModel
 from dotenv import load_dotenv
 import os
+from urllib.parse import urlparse
 
 
 load_dotenv()
@@ -21,13 +22,8 @@ oauth2_scheme = OAuth2PasswordBearer(tokenUrl="login")
 app = FastAPI()
 
 def get_db():
-    conn = psycopg2.connect(
-        host=os.getenv("DB_HOST"),
-        port=os.getenv("DB_PORT"),
-        dbname=os.getenv("DB_NAME"),
-        user=os.getenv("DB_USER"),
-        password=os.getenv("DB_PASSWORD")
-    )
+    db_url = os.getenv("DATABASE_URL")
+    conn = psycopg2.connect(db_url)
     return conn
 
 class item_c(BaseModel):
