@@ -2,17 +2,17 @@
 An API for managing inventory items secured with Jwt Authentication
 
 ## Features
--User Registration and Login with password hashing
--Full CRUD operation on items
--JWT based authentication(15 minutes expiry)
--Postgresql for data storage
--deployed on railway
+- User Registration and Login with password hashing
+- Full CRUD operation on items
+- JWT based authentication(15 minutes expiry)
+- Postgresql for data storage
+- deployed on railway
 
 ## Tech stack
--Fastapi (python)
--bcrypt (password hashing)
--python-jose (JWT authentication)
--Postgresql (for database)
+- Fastapi (python)
+- bcrypt (password hashing)
+- python-jose (JWT authentication)
+- Postgresql (for database)
 
 ## Setup
 
